@@ -1,0 +1,49 @@
+*
+  box-sizing: border-box
+  margin: 0
+  border: 0
+
+body
+  background-color: #ccc
+  font-family: Helvetica, sans-serif
+header
+  padding: 1rem
+  display: flex
+  jsutify-content: center
+  flex-direction: column
+.arrow-down
+  grid-area: arrow
+  position: fixed
+  top: 0
+  left: 45.75%
+  width: 0
+  height: 0
+  border-left: 80px solid transparent
+  border-right: 80px solid transparent
+  border-top: 80px solid grey
+  justify-self: center
+
+.timeline
+  display: grid
+  grid-template-columns: 1fr 0.1fr 1fr
+  grid-template-areas: "text arrow images"
+  grid-auto-rows: repeat(auto, 800px)
+
+  .arrow
+    margin-top: -20px
+    border-left: 8px solid grey
+    height: 100%
+    grid-area: arrow
+    justify-self: center
+
+  .text
+    grid-area: text
+
+
+  .images
+    grid-area: images
+
+.content
+  // display: flex
+  // align-content: center
+  padding: 2rem

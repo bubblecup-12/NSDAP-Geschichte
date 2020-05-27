@@ -1,0 +1,19 @@
+<div class="container text">
+  {% for event in site.data.events.events %}
+  <div class="content">
+    <h2 class="date">{{ event.date }}</h2>
+    {% for item in event.text %}
+    <p>{{ item.paragraph }}</p>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+<div class="container images">
+  {% for event in site.data.events.events %}
+  <div class="content">
+    {% for image in event.images %}
+    <img src="{{ image.link }}" alt="">
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
